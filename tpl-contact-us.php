@@ -93,7 +93,8 @@ color:gray;
    <span><a style="color:#686868;" href="tel:00966 138260994">+966 13 826 0994</a></span><br>
 	 <span><a style="color:#686868;" href="mailto:info@alkafaa.com">info@alkafaa.com</a></span>
 	 <span><a style="color:#686868;" href="mailto:sales@alkafaa.com ">\ sales@alkafaa.com </a></span>
-<li class="sal">•	Mohammed Abdul Hadi:
+
+<!-- <li class="sal">•	Mohammed Abdul Hadi:
    <span><a style="color:#686868;" href="tel:+966 55 660 6197">+966 55 660 6197</a></span><br>
 <span><a style="color:#686868;" href="mailto:m.hadi@alkafaa.com">m.hadi@alkafaa.com</a></span>
 
@@ -109,8 +110,9 @@ color:gray;
 </li><li class="sal">•	Amir Sheikh:
    <span><a style="color:#686868;" href="tel:+966 55 727 7706">+966 55 727 7706</a></span><br>
    <span><a style="color:#686868;" href="mailto:jamir.sheikh@alkafaa.com">amir.sheikh@alkafaa.com</a></span>
-</li>
+</li> -->
 <br>
+
 	<br><br><b>&#8722;Aramco Division:</b>								
 </li><li class="sal">•	Aslam Sattar:
    <span><a style="color:#686868;" href="tel:+966 55 098 8812">+966 55 098 8812</a></span><br>
