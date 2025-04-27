@@ -1,0 +1,167 @@
+<?php
+/**
+ * The template for displaying pages
+ *
+ Template Name: Pipe Calculator
+ */
+
+get_header(); ?>
+
+<?php
+global $wpdb;
+$table_wallthickness = $wpdb->prefix . "your_wallthickness";
+$table_thickness = $wpdb->prefix . "thickness";
+$table_schedule = $wpdb->prefix . "schedule";
+
+if (isset($_POST['calculate'])) {
+	
+	$length = $_POST['length'];
+	$weightpermeter = $_POST['weightpermeter'];
+	$calculated_result = $length * $weightpermeter;
+}
+
+?>
+
+<!--<script type="text/javascript" src="<?php bloginfo('template_url');?>/js/pipe-calc.js"></script>-->
+
+ <div class="page-top  overlape">
+			<div class="parallax" data-velocity="-.1" style="background: url(<?php echo the_field('page_title_background_image'); ?>) repeat scroll 0 0"></div>
+			<div class="container">
+				<div class="page-title">
+					<span><?php echo $variable = get_field('sub_title'); ?></span>
+					<h3><?php echo $variable = get_field('title'); ?></h3>
+				</div><!-- Page Title -->
+			</div>
+		</div>
+        
+    <section class="block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="top-margin">
+							<div class="row">
+								<div class="col-md-2"></div>
+
+								<div class="col-md-8"> 
+                                
+                                	<div class="cargo-shipment">
+                                	<div class="calculate-shipping">
+                                
+                                	<div class="calculate-shipping-form">
+                                    
+                                	 <form method="post" action=""> 
+                                                                                      
+                                                <label>Nominal Pipe Size ( In Inches )<span style="color:#F90207; font-size:18px;">*</span></label>
+                                                <div class="col-md-6">
+                                                    <div class="select-to select-box">
+                                                       <select name="pipe_thickness" id="pipe_thickness" onchange="this.form.submit();">
+														<?php $retrieve_data = $wpdb->get_results( "SELECT * FROM $table_thickness" );
+															   echo '<option value="-1" selected="selected">' . '--Select--' . '</option>'; 
+															  foreach ($retrieve_data as $retrieved_data){ 
+                                                              //echo '<option value="' . $retrieved_data->name . '">' . $retrieved_data->display_name. '</option>'; 
+															  ?>
+															 <option <?php if($_POST['pipe_thickness'] == $retrieved_data->name){echo "selected = 'selected'"; } ?> value="<?php echo $retrieved_data->name; ?>"><?php echo $retrieved_data->display_name; ?></option>
+															<?php   
+																} 
+                                                        ?>
+                                                        </select>
+                                                       
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2"><label style="padding-top: 15px;">Inches</label></div>
+												<label>Outer Diameter <span style="color:#F90207; font-size:18px;">*</span></label>
+                                                <div class="col-md-6">
+                                                	 <?php $outerDiameter = $wpdb->get_results('SELECT id, outerdiameter FROM alkf_thickness WHERE name="'.$_POST['pipe_thickness'].'" ');
+														  	foreach ($outerDiameter as $outerData){  $outer_Data = $outerData->outerdiameter; $thickId = $outerData->id; } ?>													 
+                                                   <input type="text" name="outer_diameter" id="outer_diameter" class="text-field" value="<?php echo $outer_Data; ?>" />
+                                                    <!--<input type="hidden" name="thickness_id" value="<?php // echo $thickId;?>"  />-->
+                                                   
+                                                </div>
+                                                <div class="col-md-2"><label style="padding-top: 15px;">Inches</label></div>
+												  
+                                                 <label>Schedule<span style="color:#F90207; font-size:18px;">*</span></label> 	
+                                                 <div class="col-md-6">
+                                                 	<div class="select-to select-box">  
+                                                        <select name="schedule" id="schedule" onchange="this.form.submit();">
+														<?php $schedule_data = $wpdb->get_results( "SELECT * FROM alkf_schedule WHERE thick_id= '".$thickId."' " );
+															   echo '<option value="-1" selected="selected">' . '--Select--' . '</option>'; 
+															  foreach ($schedule_data as $scheduled_data){ 
+                                                             // echo '<option value="' . $scheduled_data->name . '">' . $scheduled_data->name. '</option>'; ?>
+															 <option <?php if($_POST['schedule'] == $scheduled_data->name){echo "selected = 'selected'"; } ?> value="<?php echo $scheduled_data->name; ?>"><?php echo $scheduled_data->name; ?></option>
+															<?php   
+																} 
+                                                        ?>
+                                                        </select> 
+                                                    </div>
+                                                 </div>  
+                                                 <div class="col-md-2"><label style="padding-top: 15px;">Inches</label></div> 
+                                            
+                                                 <label>Wall Thickness <span style="color:#F90207; font-size:18px;">*</span></label>
+                                                 <div class="col-md-6"> 
+                                                 <?php 	 
+												 		 
+															$schedule_id = $wpdb->get_results( "SELECT * FROM alkf_schedule WHERE name='".$_POST['schedule']."' AND thick_id='".$thickId."' " ); 
+														 	foreach ($schedule_id as $scheduled_id){ $scheduled_ID = $scheduled_id->id; }
+															 
+															 
+															//echo $sql = 'SELECT * FROM alkf_wallthickness WHERE thicknessId="'.$thickId.'" AND scheduleId="'.$schedule_ID.'" ';
+															
+												 			$Thickness = $wpdb->get_results('SELECT * FROM alkf_wallthickness WHERE thicknessId="'.$thickId.'" AND scheduleId="'.$scheduled_ID.'"  ');
+														  	foreach ($Thickness as $wallThickness){ $WallThicknessRes = $wallThickness->wallthickness; $Weight_per_Meter = $wallThickness->weight_per_mtr;} ?>
+                                                 <input type="text" name="wall_thickness" class="text-field" value="<?php echo  $WallThicknessRes; ?>" />
+                                                 <input type="hidden" name="weightpermeter" value="<?php echo $Weight_per_Meter; ?>" />
+                                                 </div>
+                                                 <div class="col-md-2"><label style="padding-top: 15px;">Inches</label></div> 
+                                                 
+                                                  <label>Length</label> 
+                                                 <div class="col-md-6"> 
+                                                 <input type="type" class="text-field" placeholder="Length" name="length" value="<?php if(!empty($length)) { echo $length; } ?>" maxlength="500" /> 
+                                                 </div>
+                                                 <div class="col-md-2"><label style="padding-top: 15px;">Meter</label></div> 
+                                                 
+                                                  <input type="hidden" name="calculate" />
+                                                  <label><button type="submit" name="calculate" class="btn btn-primary">Calculate Weight</button></label> 
+                                                 <div class="col-md-6"> 
+                                                  	
+                                                 <input type="type" readonly class="text-field" placeholder="Calculated Weight" maxlength="500" value="<?php if(!empty($calculated_result)) { echo $calculated_result; } ?>" /> 
+                                                 </div>
+                                                 <div class="col-md-2"><label style="padding-top: 15px;">Kg/m</label></div> 
+                                                
+                                                <!-- <label><button type="button" class="btn btn-primary">Calculate Shipping Volume</button></label> 
+                                                 <div class="col-md-6"> 
+                                                 <input type="type" readonly class="text-field" placeholder="Calculated Shipping Volume" maxlength="500" /> 
+                                                 </div>
+                                                 <div class="col-md-2"><label style="padding-top: 15px;">Cubic Meter</label></div>  -->
+                                               
+                                        </form>
+                                        
+                                     </div>
+                                     </div>
+                                     </div>
+									 
+								</div> 
+
+								<div class="col-md-2"></div>
+							</div>
+						</div>											
+					</div>
+				</div>
+			</div>
+		</section>
+       
+       
+    <script>
+	
+	 
+	/*function PipeSize() {
+		var x = document.getElementById("pipe_size").value;
+		document.getElementById("outer_diameter").value =  x;
+	}
+	
+	function Schedule() {
+		var y = document.getElementById("schedule").value;
+		document.getElementById("wall_thickness").value =  y;
+	}*/
+	
+    </script>
+<?php get_footer(); ?>
