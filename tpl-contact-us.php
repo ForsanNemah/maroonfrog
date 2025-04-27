@@ -122,10 +122,12 @@ color:gray;
 </li><li class="sal">•	Main Line:
    <span><a style="color:#686868;" href="tel:+966 13 811 9645">+966 13 811 9645</a></span><br>                                                  
       <br>
-</li><li class="sal">•	Habibullah Kishmat:  
+</li>
+
+<!-- <li class="sal">•	Habibullah Kishmat:  
 		<span><a style="color:#686868;" href="tel:+966 59 298 5279">+966 59 298 5279</a></span><br>
 </li><li class="sal">•	Nasurudeen Thamissudin:
-		<span><a style="color:#686868;" href="tel:+966 53 798 1966">+966 53 798 1966</a></span><br>
+		<span><a style="color:#686868;" href="tel:+966 53 798 1966">+966 53 798 1966</a></span><br> -->
 			<br>
 <b>&#8722;Riyadh:</b>
 </li><li class="sal">Asif Iqbal: 
