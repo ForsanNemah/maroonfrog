@@ -129,7 +129,7 @@ color:gray;
 </li><li class="sal">•	Nasurudeen Thamissudin:
 		<span><a style="color:#686868;" href="tel:+966 53 798 1966">+966 53 798 1966</a></span><br> -->
 			<br>
-<b>&#8722;Riyadh:</b>
+<!-- <b>&#8722;Riyadh:</b> -->
 
 <!-- </li><li class="sal">Asif Iqbal: 
 		<span><a style="color:#686868;" href="tel:966500010871">+966 50 001 0871</a></span><br>
