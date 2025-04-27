@@ -130,7 +130,8 @@ color:gray;
 		<span><a style="color:#686868;" href="tel:+966 53 798 1966">+966 53 798 1966</a></span><br> -->
 			<br>
 <b>&#8722;Riyadh:</b>
-</li><li class="sal">Asif Iqbal: 
+
+<!-- </li><li class="sal">Asif Iqbal: 
 		<span><a style="color:#686868;" href="tel:966500010871">+966 50 001 0871</a></span><br>
     <span><a style="color:#686868;" href="mailto:asif.iqbal@alkafaa.com">asif.iqbal@alkafaa.com</a></span>
 </li><li class="sal">Sheraz Imtiaz: 
@@ -141,7 +142,7 @@ color:gray;
    <span><a style="color:#686868;" href="tel:966557111355">+966 55 711 1355</a></span><br>
    <span><a style="color:#686868;" href="mailto:syed.lathif@alkafaa.com">syed.lathif@alkafaa.com</a></span>
     </li></ul>
-</span>
+</span> -->
 
 <style>
 ul.sal{list-style-type:none;}
