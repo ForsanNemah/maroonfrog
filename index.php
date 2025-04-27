@@ -11,143 +11,109 @@ get_header(); ?>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="main-slider overlape">
-    <div id="full-slider-wrapper" style="position:relative;">
+    <div id="full-slider-wrapper">
         <div id="layerslider" style="width:100%; height:696px;">
-            
             <!-- Slide 1 -->
             <div class="ls-slide" data-ls="transition2d:30; timeshift:-1000; slidedelay:6000;">
-                <img itemprop="image" src="<?php bloginfo('template_url'); ?>/images/maroonfrog/slider004.jpg" class="ls-bg img-responsive" alt="Slide background" />
-                <span class="ls-slide" style="top:290px; left:48%; font-family:Raleway, sans-serif; color:#ffffff; border-radius:3px; padding:12px 40px; background-color:#1c3f94; font-size:20px; font-weight:200;">
-                    ALKAFAA is an approved stockiest / supplier for all major companies like<br />
-                    SAUDI ARAMCO, SABIC, SCECO, MARAFIQ, MAADEN, SWCC and many others.
-                </span>
+                <img itemprop="image" src="<?php bloginfo('template_url');?>/images/maroonfrog/slider004.jpg" class="ls-bg" alt="Slide background" />
+                <span class="ls-slide" style="top:290px; left:48%; font-family:raleway; color:#ffffff; border-radius:3px; padding:12px 40px; background-color:#1c3f94; font-size:20px; font-weight:200;" data-ls="offsetyout:bottom; offsetyin:top; durationin:1300; delayin:500; easingin:easeOutBack;">ALKAFAA is an approved stockiest / supplier for all major companies like<br>SAUDI ARAMCO, SABIC, SCECO, MARAFIQ, MAADEN, SWCC and many others.</span>
             </div>
 
             <!-- Slide 2 -->
             <div class="ls-slide" data-ls="transition2d:35; timeshift:-1000; slidedelay:9000;">
-                <img itemprop="image" src="<?php bloginfo('template_url'); ?>/images/maroonfrog/slider001.jpg" class="ls-bg img-responsive" alt="Slide background" />
-                <div class="ls-slide" style="font-family:Raleway, sans-serif; font-weight:700; font-size:40px; text-transform:uppercase; color:#f58426; top:214px; left:100px;">Together We Are</div>
-                <div class="ls-slide" style="font-family:Raleway, sans-serif; font-size:50px; color:#ffffff; font-weight:900; top:275px; left:100px;">"Together We<br />&nbsp;&nbsp;Thrive"</div>
-                <div class="ls-slide" style="font-family:Raleway, sans-serif; font-size:20px; color:#ffffff; top:445px; left:100px;">
-                    ALKAFAA is a reliable supplier for full range<br />
-                    of Carbon Steel, Stainless Steel Pipes,<br />Fittings, Sheets & Valve.
-                </div>
-                <a href="/about-us" class="ls-slide btn btn-primary" style="top:539px; left:100px;">More About Us</a>
+                <img itemprop="image" src="<?php bloginfo('template_url');?>/images/maroonfrog/slider001.jpg" class="ls-bg" alt="Slide background" />
+                <div class="ls-slide" style="font-family:raleway; font-weight:700; font-size:40px; text-transform:uppercase; line-height:28px; color:#f58426; top:214px; left:100px;" data-ls="offsetxout:right; offsetxin:left; durationin:700;">Together We Are</div>
+                <div class="ls-slide" style="font-family:raleway; font-size:50px; color:#ffffff; font-weight:900; top:275px; left:100px;" data-ls="offsetxout:left; offsetxin:right; durationin:900; delayin:1000;">"Together We<br> Thrive"</div>
+                <div class="ls-slide" style="line-height:28px; font-family:raleway; font-size:20px; color:#ffffff; top:445px; left:100px;" data-ls="offsetxout:left; offsetxin:right; durationin:1300; delayin:1200;">ALKAFAA is a reliable supplier for full range of Carbon Steel, Stainless Steel Pipes, Fittings, Sheets & Valve.</div>
+                <a href="/about-us" class="ls-slide slide-icon" style="padding:16px 45px; background:#1c3f94; color:#ffffff; font-size:12px; top:539px; left:100px;" data-ls="offsetxout:left; offsetyin:bottom; durationin:1500;">More About Us</a>
             </div>
 
             <!-- Slide 3 -->
             <div class="ls-slide" data-ls="transition2d:40; timeshift:-1000; slidedelay:6000;">
-                <img itemprop="image" src="<?php bloginfo('template_url'); ?>/images/maroonfrog/slider002.jpg" class="ls-bg img-responsive" alt="Slide background" />
-                <img src="<?php bloginfo('template_url'); ?>/images/maroonfrog/logo-alkafaa-s.png" width="160" alt="Logo" class="ls-slide img-responsive center-block" style="top:200px;" />
-                <h4 class="ls-slide text-primary" style="top:324px; font-family:Raleway, sans-serif; font-size:30px;">Established in 1982</h4>
-                <span class="ls-slide label label-primary" style="top:390px;">Backed by more than 4 decades of experience</span>
+                <img itemprop="image" src="<?php bloginfo('template_url');?>/images/maroonfrog/slider002.jpg" class="ls-bg" alt="Slide background" />
+                <img src="<?php bloginfo('template_url');?>/images/maroonfrog/logo-alkafaa-s.png" width="160" alt="" class="ls-slide" style="top:200px; left:50%;" data-ls="offsetyout:top; offsetyin:top; durationin:700;" />
+                <h4 class="ls-slide text-color" style="top:324px; left:50%; font-family:raleway; font-size:30px; line-height:55px; font-weight:900; text-transform:uppercase; color:#f58426;" data-ls="offsetxout:left; rotatexin:90deg; durationin:900; delayin:300;">Established in 1982</h4>
+                <span class="ls-slide" style="top:390px; left:50%; font-family:raleway; color:#ffffff; border-radius:3px; padding:12px 40px; background-color:#1c3f94; font-size:20px; font-weight:200;" data-ls="offsetyout:bottom; offsetyin:top; durationin:1300; delayin:500;">"Backed by more than 4 decades of experience"</span>
             </div>
 
             <!-- Slide 4 -->
             <div class="ls-slide" data-ls="transition2d:30; timeshift:-1000; slidedelay:6000;">
-                <img itemprop="image" src="<?php bloginfo('template_url'); ?>/images/maroonfrog/slider003.jpg" class="ls-bg img-responsive" alt="Slide background" />
-                <div class="ls-slide" style="top:223px; font-family:Raleway, sans-serif; font-size:30px; color:#ffffff;">ALKAFAA is referred as the</div>
-                <h3 class="ls-slide text-primary" style="top:260px; font-family:Raleway, sans-serif; font-weight:500; font-size:30px;">"Leading Stockiest Company in Saudi Arabia"</h3>
-                <strong class="ls-slide label label-primary" style="top:345px;">Fast & Secure Delivery</strong>
-            </div>
-
-        </div>
-
-        <!-- Navigation Buttons (Bootstrap Row for Next/Prev) -->
-        <div class="container" style="position: absolute; bottom: 20px; left: 0; right: 0;">
-            <div class="row">
-                <div class="col-xs-6 text-left">
-                    <button id="slider-prev" class="btn btn-primary btn-lg">
-                        <span class="glyphicon glyphicon-chevron-left"></span> Prev
-                    </button>
-                </div>
-                <div class="col-xs-6 text-right">
-                    <button id="slider-next" class="btn btn-primary btn-lg">
-                        Next <span class="glyphicon glyphicon-chevron-right"></span>
-                    </button>
-                </div>
+                <img itemprop="image" src="<?php bloginfo('template_url');?>/images/maroonfrog/slider003.jpg" class="ls-bg" alt="Slide background" />
+                <div class="ls-slide" style="top:223px; left:50%; font-family:raleway; font-size:30px; color:#ffffff; text-shadow:-2px 4px 18px rgba(0,0,0,0.15);" data-ls="offsetyout:top; offsetyin:top; durationin:700;">ALKAFAA is referred as the</div>
+                <h3 class="ls-slide text-color" style="top:260px; left:50%; line-height:70px; font-family:raleway; font-weight:500; font-size:30px; text-transform:uppercase; color:#ffffff;" data-ls="offsetyout:top; rotatexin:90deg; durationin:900; delayin:300;">"Leading Stockiest Company in Saudi Arabia"</h3>
+                <strong class="ls-slide" style="top:345px; left:50%; letter-spacing:3px; font-family:raleway; color:#ffffff; text-transform:uppercase; border-radius:3px; padding:14px 25px; background:#1c3f94; font-size:13px;" data-ls="offsetyout:bottom; offsetyin:top; durationin:1300; delayin:500;">Fast & Secure Delivery</strong>
             </div>
         </div>
 
+        <!-- Dots Navigation -->
+        <div class="slider-dots" style="text-align:center; margin-top:20px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
     </div>
-</div><!-- Main Slider -->
+</div>
 
+<!-- Add CSS for dots -->
+<style>
+.slider-dots {
+    position: relative;
+}
+.slider-dots .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.slider-dots .dot:hover {
+    background-color: #717171;
+}
+.slider-dots .active {
+    background-color: #1c3f94;
+}
+</style>
+
+<!-- Add JS to control the dots -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var sliderInstance = $('#layerslider').layerSlider('data');
-
-    document.getElementById('slider-prev').addEventListener('click', function() {
-        if (sliderInstance) {
-            sliderInstance.prev();
-        }
-    });
-    document.getElementById('slider-next').addEventListener('click', function() {
-        if (sliderInstance) {
-            sliderInstance.next();
-        }
-    });
-});
+function currentSlide(n) {
+    // Requires you to call LayerSlider API
+    if (window.layerSlider) {
+        $('#layerslider').layerSlider(n - 1); 
+    }
+}
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
