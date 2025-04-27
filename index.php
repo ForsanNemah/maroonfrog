@@ -54,17 +54,19 @@ get_header(); ?>
 
         </div>
 
-        <!-- Arrows using Bootstrap 3 buttons -->
-        <div class="row" style="position:absolute; top:50%; width:100%; margin:0; pointer-events:none;">
-            <div class="col-xs-6 text-left">
-                <button id="slider-prev" class="btn btn-default btn-lg" style="pointer-events:auto;">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </button>
-            </div>
-            <div class="col-xs-6 text-right">
-                <button id="slider-next" class="btn btn-default btn-lg" style="pointer-events:auto;">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </button>
+        <!-- Navigation Buttons (Bootstrap Row for Next/Prev) -->
+        <div class="container" style="position: absolute; bottom: 20px; left: 0; right: 0;">
+            <div class="row">
+                <div class="col-xs-6 text-left">
+                    <button id="slider-prev" class="btn btn-primary btn-lg">
+                        <span class="glyphicon glyphicon-chevron-left"></span> Prev
+                    </button>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <button id="slider-next" class="btn btn-primary btn-lg">
+                        Next <span class="glyphicon glyphicon-chevron-right"></span>
+                    </button>
+                </div>
             </div>
         </div>
 
