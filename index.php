@@ -16,86 +16,112 @@ get_header(); ?>
 
 
 
-<div class="main-slider overlape">
-    <div id="full-slider-wrapper">
-        
-        <!-- Next/Prev Buttons (TOP) -->
-        <div class="slider-buttons" style="text-align:center; margin-bottom:20px;">
-            <button onclick="prevSlide()" class="slider-btn">Prev</button>
-            <button onclick="nextSlide()" class="slider-btn">Next</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap Carousel -->
+<div id="main-slider" class="carousel slide" data-ride="carousel">
+  
+  <!-- Indicators (النقاط تحت السلايدر) -->
+  <ol class="carousel-indicators">
+    <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+    <li data-target="#main-slider" data-slide-to="1"></li>
+    <li data-target="#main-slider" data-slide-to="2"></li>
+    <li data-target="#main-slider" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+    <!-- Slide 1 -->
+    <div class="item active">
+      <img src="<?php bloginfo('template_url');?>/images/maroonfrog/slider004.jpg" alt="Slide 1">
+      <div class="carousel-caption">
+        <h3>ALKAFAA is an approved stockiest / supplier for all major companies</h3>
+        <p>SAUDI ARAMCO, SABIC, SCECO, MARAFIQ, MAADEN, SWCC and many others.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="item">
+      <img src="<?php bloginfo('template_url');?>/images/maroonfrog/slider001.jpg" alt="Slide 2">
+      <div class="carousel-caption">
+        <h3>Together We Are</h3>
+        <p>"Together We Thrive" - Reliable supplier for Carbon Steel, Stainless Steel, Pipes, Fittings, Sheets & Valves.</p>
+        <a href="/about-us" class="btn btn-primary">More About Us</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="item">
+      <img src="<?php bloginfo('template_url');?>/images/maroonfrog/slider002.jpg" alt="Slide 3">
+      <div class="carousel-caption">
+        <img src="<?php bloginfo('template_url');?>/images/maroonfrog/logo-alkafaa-s.png" width="160" alt="">
+        <h3>Established in 1982</h3>
+        <p>Backed by more than 4 decades of experience.</p>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="item">
+      <img src="<?php bloginfo('template_url');?>/images/maroonfrog/slider003.jpg" alt="Slide 4">
+      <div class="carousel-caption">
+        <h3>ALKAFAA is referred as the "Leading Stockiest Company in Saudi Arabia"</h3>
+        <strong class="btn btn-primary">Fast & Secure Delivery</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls (Next & Prev Buttons) -->
+  <a class="left carousel-control" href="#main-slider" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#main-slider" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+
+<!-- Track Download Section -->
+<section class="overlape3 maroon-bg2 track-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="track-form">
+          <div class="heading2">
+            <img src="<?php bloginfo('template_url');?>/images/maroonfrog/logo-alkafaa-s.png" width="100" alt="">
+            <span>DOWNLOAD</span>
+            <h3>PRODUCT CATALOG</h3>
+          </div>
+          <form>
+            <label>Company overview, products, clients, projects and more...</label>
+            <a href="<?php bloginfo('template_url');?>/images/maroonfrog/Alkafaa_Catalogue.pdf" class="theme-btn">
+              <i class="fa fa-download"></i> DOWNLOAD
+            </a>
+          </form>
         </div>
-
-        <div id="layerslider" style="width:100%; height:696px;">
-            <!-- Slide 1 -->
-            <div class="ls-slide" data-ls="transition2d:30; timeshift:-1000; slidedelay:6000;">
-                <img itemprop="image" src="<?php bloginfo('template_url');?>/images/maroonfrog/slider004.jpg" class="ls-bg" alt="Slide background" />
-                <span class="ls-slide" style="top:290px; left:48%; font-family:raleway; color:#ffffff; border-radius:3px; padding:12px 40px; background-color:#1c3f94; font-size:20px; font-weight:200;">ALKAFAA is an approved stockiest / supplier for all major companies like<br>SAUDI ARAMCO, SABIC, SCECO, MARAFIQ, MAADEN, SWCC and many others.</span>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="ls-slide" data-ls="transition2d:35; timeshift:-1000; slidedelay:9000;">
-                <img itemprop="image" src="<?php bloginfo('template_url');?>/images/maroonfrog/slider001.jpg" class="ls-bg" alt="Slide background" />
-                <div class="ls-slide" style="font-family:raleway; font-weight:700; font-size:40px; text-transform:uppercase; line-height:28px; color:#f58426; top:214px; left:100px;">Together We Are</div>
-                <div class="ls-slide" style="font-family:raleway; font-size:50px; color:#ffffff; font-weight:900; top:275px; left:100px;">"Together We Thrive"</div>
-                <div class="ls-slide" style="line-height:28px; font-family:raleway; font-size:20px; color:#ffffff; top:445px; left:100px;">ALKAFAA is a reliable supplier for full range of Carbon Steel, Stainless Steel Pipes, Fittings, Sheets & Valve.</div>
-                <a href="/about-us" class="ls-slide slide-icon" style="padding:16px 45px; background:#1c3f94; color:#ffffff; font-size:12px; top:539px; left:100px;">More About Us</a>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="ls-slide" data-ls="transition2d:40; timeshift:-1000; slidedelay:6000;">
-                <img itemprop="image" src="<?php bloginfo('template_url');?>/images/maroonfrog/slider002.jpg" class="ls-bg" alt="Slide background" />
-                <img src="<?php bloginfo('template_url');?>/images/maroonfrog/logo-alkafaa-s.png" width="160" alt="" class="ls-slide" style="top:200px; left:50%;" />
-                <h4 class="ls-slide text-color" style="top:324px; left:50%; font-family:raleway; font-size:30px; line-height:55px; font-weight:900; text-transform:uppercase; color:#f58426;">Established in 1982</h4>
-                <span class="ls-slide" style="top:390px; left:50%; font-family:raleway; color:#ffffff; border-radius:3px; padding:12px 40px; background-color:#1c3f94; font-size:20px; font-weight:200;">"Backed by more than 4 decades of experience"</span>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="ls-slide" data-ls="transition2d:30; timeshift:-1000; slidedelay:6000;">
-                <img itemprop="image" src="<?php bloginfo('template_url');?>/images/maroonfrog/slider003.jpg" class="ls-bg" alt="Slide background" />
-                <div class="ls-slide" style="top:223px; left:50%; font-family:raleway; font-size:30px; color:#ffffff;">ALKAFAA is referred as the</div>
-                <h3 class="ls-slide text-color" style="top:260px; left:50%; line-height:70px; font-family:raleway; font-weight:500; font-size:30px; text-transform:uppercase; color:#ffffff;">"Leading Stockiest Company in Saudi Arabia"</h3>
-                <strong class="ls-slide" style="top:345px; left:50%; letter-spacing:3px; font-family:raleway; color:#ffffff; text-transform:uppercase; border-radius:3px; padding:14px 25px; background:#1c3f94; font-size:13px;">Fast & Secure Delivery</strong>
-            </div>
-
-        </div> <!-- End #layerslider -->
-    </div> <!-- End #full-slider-wrapper -->
-</div> <!-- End .main-slider -->
-
-<!-- Add CSS for buttons -->
-<style>
-.slider-buttons {
-    position: relative;
-}
-.slider-buttons .slider-btn {
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 0 5px;
-    background-color: #1c3f94;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-.slider-buttons .slider-btn:hover {
-    background-color: #f58426;
-}
-</style>
-
-<!-- Add JS to control the buttons -->
-<script>
-function nextSlide() {
-    if (window.layerSlider) {
-        $('#layerslider').layerSlider('next');
-    }
-}
-
-function prevSlide() {
-    if (window.layerSlider) {
-        $('#layerslider').layerSlider('prev');
-    }
-}
-</script>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -116,47 +142,6 @@ function prevSlide() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class="overlape3 maroon-bg2 track-sec">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="track-form">
-                            <div class="heading2">
-                                <img src="<?php bloginfo('template_url');?>/images/maroonfrog/logo-alkafaa-s.png" width="100" alt="" />
-                                <span>DOWNLOAD </span>
-                                <h3>PRODUCT CATALOG</h3>
-                            </div>
-                            <form>
-                                <label>Company overview, products, clients, projects and more... </label>
-                                                                <a title="" href="<?php bloginfo('template_url');?>/images/maroonfrog/Alkafaa_Catalogue.pdf" class="theme-btn"><i class="fa fa-download"></i>DOWNLOAD</a>
-
-                            </form> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
 		<section class="block maroon-bg2" style="padding-top:10px;">
             <div class="container">
