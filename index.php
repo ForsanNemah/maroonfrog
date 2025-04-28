@@ -16,40 +16,13 @@ get_header(); ?>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="main-slider overlape">
     <div id="full-slider-wrapper">
         
-        <!-- Dots Navigation (TOP) -->
-        <div class="slider-dots" style="text-align:center; margin-bottom:20px;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
+        <!-- Next/Prev Buttons (TOP) -->
+        <div class="slider-buttons" style="text-align:center; margin-bottom:20px;">
+            <button onclick="prevSlide()" class="slider-btn">Prev</button>
+            <button onclick="nextSlide()" class="slider-btn">Next</button>
         </div>
 
         <div id="layerslider" style="width:100%; height:696px;">
@@ -88,37 +61,66 @@ get_header(); ?>
     </div> <!-- End #full-slider-wrapper -->
 </div> <!-- End .main-slider -->
 
-<!-- Add CSS for dots -->
+<!-- Add CSS for buttons -->
 <style>
-.slider-dots {
+.slider-buttons {
     position: relative;
 }
-.slider-dots .dot {
+.slider-buttons .slider-btn {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    padding: 10px 20px;
     margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.slider-dots .dot:hover {
-    background-color: #717171;
-}
-.slider-dots .active {
     background-color: #1c3f94;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.slider-buttons .slider-btn:hover {
+    background-color: #f58426;
 }
 </style>
 
-<!-- Add JS to control the dots -->
+<!-- Add JS to control the buttons -->
 <script>
-function currentSlide(n) {
+function nextSlide() {
     if (window.layerSlider) {
-        $('#layerslider').layerSlider(n - 1);
+        $('#layerslider').layerSlider('next');
+    }
+}
+
+function prevSlide() {
+    if (window.layerSlider) {
+        $('#layerslider').layerSlider('prev');
     }
 }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
