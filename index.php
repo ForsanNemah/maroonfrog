@@ -34,94 +34,109 @@ get_header(); ?>
 
 
 
-<!-- Bootstrap Carousel -->
-<div id="main-slider" class="carousel slide" data-ride="carousel">
-  
-  <!-- Indicators (النقاط تحت السلايدر) -->
-  <ol class="carousel-indicators">
-    <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-    <li data-target="#main-slider" data-slide-to="1"></li>
-    <li data-target="#main-slider" data-slide-to="2"></li>
-    <li data-target="#main-slider" data-slide-to="3"></li>
-  </ol>
+<style>
+.slider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
 
-    <!-- Slide 1 -->
-    <div class="item active">
-      <img src="<?php bloginfo('template_url');?>/images/maroonfrog/slider004.jpg" alt="Slide 1">
-      <div class="carousel-caption">
-        <h3>ALKAFAA is an approved stockiest / supplier for all major companies</h3>
-        <p>SAUDI ARAMCO, SABIC, SCECO, MARAFIQ, MAADEN, SWCC and many others.</p>
-      </div>
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#slide1:checked ~ .slides { transform: translateX(0%); }
+#slide2:checked ~ .slides { transform: translateX(-100%); }
+#slide3:checked ~ .slides { transform: translateX(-200%); }
+#slide4:checked ~ .slides { transform: translateX(-300%); }
+
+/* Hide radio buttons */
+.slider input { display: none; }
+
+/* Navigation buttons */
+.nav-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Optional: dots indicator */
+.dots {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  z-index: 15;
+}
+
+.dots label {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+#slide1:checked ~ .dots label[for="slide1"],
+#slide2:checked ~ .dots label[for="slide2"],
+#slide3:checked ~ .dots label[for="slide3"],
+#slide4:checked ~ .dots label[for="slide4"] {
+  background-color: #717171;
+}
+</style>
+
+<div class="slider">
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+  <input type="radio" name="slider" id="slide4">
+
+  <div class="slides">
+    <div class="slide" style="background-image: url('<?php bloginfo('template_url');?>/images/maroonfrog/slider004.jpg');">
     </div>
-
-    <!-- Slide 2 -->
-    <div class="item">
-      <img src="<?php bloginfo('template_url');?>/images/maroonfrog/slider001.jpg" alt="Slide 2">
-      <div class="carousel-caption">
-        <h3>Together We Are</h3>
-        <p>"Together We Thrive" - Reliable supplier for Carbon Steel, Stainless Steel, Pipes, Fittings, Sheets & Valves.</p>
-        <a href="/about-us" class="btn btn-primary">More About Us</a>
-      </div>
+    <div class="slide" style="background-image: url('<?php bloginfo('template_url');?>/images/maroonfrog/slider001.jpg');">
     </div>
-
-    <!-- Slide 3 -->
-    <div class="item">
-      <img src="<?php bloginfo('template_url');?>/images/maroonfrog/slider002.jpg" alt="Slide 3">
-      <div class="carousel-caption">
-        <img src="<?php bloginfo('template_url');?>/images/maroonfrog/logo-alkafaa-s.png" width="160" alt="">
-        <h3>Established in 1982</h3>
-        <p>Backed by more than 4 decades of experience.</p>
-      </div>
+    <div class="slide" style="background-image: url('<?php bloginfo('template_url');?>/images/maroonfrog/slider002.jpg');">
     </div>
-
-    <!-- Slide 4 -->
-    <div class="item">
-      <img src="<?php bloginfo('template_url');?>/images/maroonfrog/slider003.jpg" alt="Slide 4">
-      <div class="carousel-caption">
-        <h3>ALKAFAA is referred as the "Leading Stockiest Company in Saudi Arabia"</h3>
-        <strong class="btn btn-primary">Fast & Secure Delivery</strong>
-      </div>
+    <div class="slide" style="background-image: url('<?php bloginfo('template_url');?>/images/maroonfrog/slider003.jpg');">
     </div>
-
   </div>
 
-  <!-- Controls (Next & Prev Buttons) -->
-  <a class="left carousel-control" href="#main-slider" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#main-slider" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+  <label for="slide4" class="nav-btn prev">&#10094;</label>
+  <label for="slide2" class="nav-btn next">&#10095;</label>
 
+  <label for="slide1" class="dots"></label>
+  <label for="slide2" class="dots"></label>
+  <label for="slide3" class="dots"></label>
+  <label for="slide4" class="dots"></label>
 </div>
-
-<!-- Track Download Section -->
-<section class="overlape3 maroon-bg2 track-sec">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="track-form">
-          <div class="heading2">
-            <img src="<?php bloginfo('template_url');?>/images/maroonfrog/logo-alkafaa-s.png" width="100" alt="">
-            <span>DOWNLOAD</span>
-            <h3>PRODUCT CATALOG</h3>
-          </div>
-          <form>
-            <label>Company overview, products, clients, projects and more...</label>
-            <a href="<?php bloginfo('template_url');?>/images/maroonfrog/Alkafaa_Catalogue.pdf" class="theme-btn">
-              <i class="fa fa-download"></i> DOWNLOAD
-            </a>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
