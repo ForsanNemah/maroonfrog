@@ -63,24 +63,52 @@
         <header class="fancy-header header2">
             <div class="top-sec">
                 <div class="top-bar">
-                    <div class="container">
-                         <span class="cargo-time"><i class="fa fa-user" style="color:#FFF; margin:0 5px;"></i> <a href="<?php echo esc_url( home_url( '/' ) ); ?>careers">Careers</a> 
-                        						 <i class="fa fa-envelope-o" style="color:#FFF; margin:0 5px;"></i> <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us">Customer Feedback</a>  
-                                                 <i class="fa fa-download" style="color:#FFF; margin:0 5px;"></i> <a href="<?php echo esc_url( home_url( '/' ) ); ?>download-center">Download Center</a></span>
-                        <div class="connect-us">
-                            <ul class="social-btn">
-                                <li><a itemprop="url" href="https://www.facebook.com/alkafaa/" title="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                <li><a itemprop="url" href="https://www.linkedin.com/in/al-kafaa-limited-company-20b596107/" title="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                               
-                                <!--<li><a itemprop="url" href="#" title=""><i class="fa fa-twitter"></i></a></li>
-                                <li><a itemprop="url" href="#" title=""><i class="fa fa-reddit"></i></a></li>
-                                <li><a itemprop="url" href="#" title=""><i class="fa fa-rss"></i></a></li>-->
-                            </ul>
-                        </div>
-                        <div class="extra-links">
-                            <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us" title="Contact Us">Contact Us</a>   /   <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>careers" title="Careers">Careers</a> /  <a style="font-family: Raleway;" itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>ar" title="عربي">عربي</a>
-                        </div>
-                    </div>
+                    
+                
+
+
+
+
+                <div class="top-bar" style="position:fixed; top:0; left:0; width:100%; background:#333; z-index:1000; padding:10px 0;">
+    <div class="container">
+        <span class="cargo-time">
+            <i class="fa fa-user" style="color:#FFF; margin:0 5px;"></i> 
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>careers" style="color: #fff;">Careers</a>
+            <i class="fa fa-envelope-o" style="color:#FFF; margin:0 5px;"></i> 
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us" style="color: #fff;">Customer Feedback</a>
+            <i class="fa fa-download" style="color:#FFF; margin:0 5px;"></i> 
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>download-center" style="color: #fff;">Download Center</a>
+        </span>
+
+        <div class="connect-us" style="display:inline-block; margin-left:20px;">
+            <ul class="social-btn" style="list-style:none; margin:0; padding:0; display:inline-flex;">
+                <li style="margin: 0 5px;"><a itemprop="url" href="https://www.facebook.com/alkafaa/" target="_blank" style="color:#fff;"><i class="fa fa-facebook"></i></a></li>
+                <li style="margin: 0 5px;"><a itemprop="url" href="https://www.linkedin.com/in/al-kafaa-limited-company-20b596107/" target="_blank" style="color:#fff;"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="extra-links" style="display:inline-block; margin-left:20px;">
+            <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us" title="Contact Us" style="color:#fff;">Contact Us</a> /
+            <a itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>careers" title="Careers" style="color:#fff;">Careers</a> /
+            <a style="font-family:Raleway; color:#fff;" itemprop="url" href="<?php echo esc_url( home_url( '/' ) ); ?>ar" title="عربي">عربي</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
             </div><!-- Top Sec -->
             <div class="logo-menu-sec">
