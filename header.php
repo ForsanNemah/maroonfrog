@@ -126,7 +126,7 @@
                             </li>
                             <li>
                                 <img src="<?php bloginfo('template_url');?>/images/resource/phone-dark.png" alt="" />
-                                <span><a style="color:#555555;" href="https://alkafaa.com/contact-us/#contact-dateil">Call us</a></span>
+                                <span><a style="color:#555555;" href="tel:966539465340">Call us</a></span>
                               <!-- code for move to another page and go to concontact part -->
                                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                               <script>
