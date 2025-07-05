@@ -121,7 +121,7 @@
                         <ul>
                             <li>
                                 <img src="<?php bloginfo('template_url');?>/images/resource/ws.png" alt="" width=40/>
-                                <span><a style="color:#555555;" href="https://wa.me/+966539465340">Chat us on WhatsApp</a></span>
+                                <span><a style="color:#555555;" href="https://wa.me/+966138260994">Chat us on WhatsApp</a></span>
                                 <p>Have Any Inquiries?</p>
                             </li>
                             <li>
